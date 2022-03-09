@@ -24,10 +24,6 @@ impl Sudoku {
     fn fillValues(&mut self){
         self.fillDiagonal();
         self.fillRemaining(0,self.SRN);
-        // print sudoku here.
-        println!("++++++++ SUDOKU before removing K digits +++++++++");
-        self.printSudoku2();
-        println!("++++++++++++++++++++++++++++++++++++++++++++++++++");
         self.removeKDigits();
     }
 
@@ -159,5 +155,8 @@ fn main() {
     let K = 20;
     let mut Sudoku = Sudoku::new(N, K);
     Sudoku.fillValues();
+    println!("++++++++ SUDOKU before removing K digits +++++++++");
     Sudoku.printSudoku2();
+    println!("++++++++++++++++++++++++++++++++++++++++++++++++++");
+   
 }
